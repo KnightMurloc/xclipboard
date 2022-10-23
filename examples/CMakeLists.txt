@@ -1,0 +1,11 @@
+project(example C)
+
+add_executable(example1 get_from_clipboard.c)
+add_executable(example2 push_to_clipboard.c)
+add_executable(example3 clipboard_change_notify.c)
+target_include_directories(example1 PRIVATE ..)
+target_include_directories(example2 PRIVATE ..)
+target_include_directories(example3 PRIVATE ..)
+target_link_libraries(example1 xclipboard)
+target_link_libraries(example2 xclipboard)
+target_link_libraries(example3 xclipboard)
